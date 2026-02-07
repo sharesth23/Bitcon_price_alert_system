@@ -115,3 +115,13 @@ tracker.set_currency('INR')
 ```
 
 ---
+## 🚀 Quick Start
+
+### Prerequisites
+```bash
+# Python 3.8 or higher
+python --version
+
+# Install all dependencies
+pip install -r requirements.txt
+```

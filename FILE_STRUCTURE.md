@@ -199,3 +199,35 @@ Total Source Code: ~50 KB
 ```
 
 ---
+
+## Key Features by Module
+
+### `database.py`
+✅ 4 normalized tables  
+✅ Transaction safety  
+✅ Historical queries  
+✅ Statistics aggregation  
+
+### `api_client.py`
+✅ 3 API integrations  
+✅ Automatic failover  
+✅ Price averaging  
+✅ 9 currency support  
+
+### `portfolio.py`
+✅ Multiple holdings  
+✅ Real-time valuation  
+✅ P/L calculation  
+✅ Historical snapshots  
+
+### `lightning.py`
+✅ Invoice generation  
+✅ Fee estimation  
+✅ BOLT11 format  
+✅ Testnet safety  
+
+### `charts.py`
+✅ Static charts  
+✅ Live charts  
+✅ Portfolio charts  
+✅ High-res export 

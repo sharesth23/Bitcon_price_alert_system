@@ -35,4 +35,14 @@ class BitcoinTracker:
             'USD': '$', 'EUR': '€', 'GBP': '£', 'JPY': '¥',
             'AUD': 'A$', 'CAD': 'C$', 'CHF': 'Fr', 'CNY': '¥', 'INR': '₹'
         }
+        self.alert_thresholds = {
+            'minor': 2.0,
+            'major': 5.0,
+            'critical': 10.0
+        }
+        
+        
+        self.portfolio = self.load_portfolio()
+        
+        self.init_database()
         

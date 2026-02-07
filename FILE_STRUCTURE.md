@@ -59,3 +59,54 @@ bitcoin-price-tracker/
 - Portfolio CRUD operations
 - Statistics calculations
 - Historical data queries
+
+#### `api_client.py` (120 lines)
+**External API integration**
+- CoinDesk API client
+- Coinbase API client
+- CoinGecko API client
+- Multi-source price aggregation
+- Automatic failover
+
+#### `portfolio.py` (140 lines)
+**Portfolio management**
+- Add/manage holdings
+- Calculate total BTC
+- Compute current value
+- Profit/loss calculations
+- Format portfolio summaries
+
+#### `lightning.py` (160 lines)
+**Lightning Network integration**
+- BOLT11 invoice generation
+- Payment hash creation
+- Payment verification
+- Routing fee estimation
+- Channel balance (mock)
+
+#### `alerts.py` (80 lines)
+**Alert system**
+- Price change detection
+- Threshold checking
+- Desktop notifications
+- Alert history logging
+
+### Utilities (`utils/`)
+
+#### `charts.py` (180 lines)
+**Data visualization**
+- Static price charts
+- Live updating charts
+- Portfolio performance charts
+- Matplotlib configuration
+- Chart export (PNG)
+
+### User Interface (`ui/`)
+
+#### `menu.py` (200 lines)
+**Interactive menu system**
+- Main menu loop
+- User input handling
+- Feature navigation
+- Error messages
+- Banner display

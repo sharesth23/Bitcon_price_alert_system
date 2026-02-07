@@ -31,3 +31,31 @@ bitcoin-price-tracker/
         └── 📄 menu.py                      # Interactive menu system
 
 📊 bitcoin_prices.db                        # SQLite database (auto-created)
+
+## Module Responsibilities
+
+### Core Package (`bitcoin_tracker/`)
+
+#### `config.py` (60 lines)
+- API endpoints
+- Supported currencies & symbols
+- Alert thresholds
+- Chart styling settings
+- Database configuration
+
+#### `tracker.py` (180 lines)
+**Main orchestrator class that coordinates all components**
+- Currency management
+- Price monitoring loop
+- Status display
+- Component integration
+
+### Core Modules (`core/`)
+
+#### `database.py` (240 lines)
+**All database operations**
+- Schema initialization (4 tables)
+- Price data storage
+- Portfolio CRUD operations
+- Statistics calculations
+- Historical data queries

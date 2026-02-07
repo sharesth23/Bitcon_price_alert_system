@@ -110,3 +110,92 @@ bitcoin-price-tracker/
 - Feature navigation
 - Error messages
 - Banner display
+
+### Entry Point
+
+#### `main.py` (50 lines)
+**Application launcher**
+- Import verification
+- Exception handling
+- Menu initialization
+- Graceful exit
+
+---
+
+## Database Tables (SQLite)
+
+### `prices` table
+- Historical Bitcoin prices
+- Multiple currency support
+- API source tracking
+
+### `portfolio` table
+- Bitcoin holdings
+- Purchase information
+- Notes per holding
+
+### `portfolio_snapshots` table
+- Historical portfolio value
+- Profit/loss over time
+- Performance tracking
+
+### `alerts` table
+- Alert history
+- Price change records
+- Notification log
+
+---
+
+## Total Code Statistics
+
+| Category | Files | Lines |
+|----------|-------|-------|
+| Core Logic | 5 | ~840 |
+| UI & Utils | 2 | ~380 |
+| Main & Config | 3 | ~290 |
+| **Total** | **12** | **~1,500** |
+
+---
+
+## Dependencies
+
+### Required
+- `requests` - HTTP API calls
+- `matplotlib` - Chart generation  
+- `numpy` - Numerical operations
+- `plyer` - Desktop notifications
+
+### Standard Library
+- `sqlite3` - Database
+- `time` - Timestamps
+- `datetime` - Date formatting
+- `hashlib` - Payment hashing
+- `threading` - Live charts
+- `typing` - Type hints
+
+---
+
+## File Sizes (Approximate)
+
+```
+main.py                    ~1.5 KB
+requirements.txt           ~0.4 KB
+bitcoin_tracker/
+  __init__.py             ~0.5 KB
+  config.py               ~2.0 KB
+  tracker.py              ~6.0 KB
+  core/
+    database.py           ~8.0 KB
+    api_client.py         ~4.0 KB
+    portfolio.py          ~5.0 KB
+    lightning.py          ~5.5 KB
+    alerts.py             ~3.0 KB
+  utils/
+    charts.py             ~6.5 KB
+  ui/
+    menu.py               ~7.0 KB
+
+Total Source Code: ~50 KB
+```
+
+---

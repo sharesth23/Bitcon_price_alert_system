@@ -45,4 +45,8 @@ class BitcoinTracker:
         self.portfolio = self.load_portfolio()
         
         self.init_database()
-        
+
+    def init_database(self):
+
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()        

@@ -15,3 +15,20 @@ Copy
 [![Lightning](https://img.shields.io/badge/Lightning-Network-blueviolet.svg)](https://lightning.network)
 
 ---
+## 🎯 Project Overview
+
+This project demonstrates comprehensive understanding of:
+- **Multi-API Bitcoin price aggregation** with redundancy and failover
+- **Multi-currency support** (USD, EUR, GBP, JPY, AUD, CAD, CHF, CNY, INR)
+- **Real-time data visualization** using matplotlib
+- **Portfolio management** with profit/loss tracking
+- **Desktop notifications** for price alerts
+- **Lightning Network** integration and payment processing
+- **Database design** for historical analysis
+- **Professional Python development** practices
+
+---
+
+## ✨ Enhanced Features
+
+### 🔥 New Features Added

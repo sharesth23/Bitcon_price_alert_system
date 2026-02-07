@@ -50,14 +50,4 @@ class BitcoinTracker:
 
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor() 
-        cursor.execute('''
-            CREATE TABLE IF NOT EXISTS prices (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                timestamp INTEGER NOT NULL,
-                price REAL NOT NULL,
-                currency TEXT NOT NULL DEFAULT 'USD',
-                source TEXT NOT NULL,
-                volume REAL,
-                UNIQUE(timestamp, source, currency)
-            )
-                       ''')       
+        

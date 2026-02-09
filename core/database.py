@@ -78,6 +78,28 @@ class Database:
         if current and old:
             return ((current[0] - old[0]) / old[0]) * 100
         return None
+    
+    def get_statistics(self, hours):
+        conn = self._connect()
+        cur = conn.cursor()
+
+        cutoff = int(time.time()) - hours * 3600
+        cur.execute(
+            "SELECT MIN(price), MAX(price), AVG(price), COUNT(*) FROM prices WHERE timestamp >= ?",
+            (cutoff,)
+        )
+        r = cur.fetchone()
+        conn.close()
+
+        if r and r[3] > 0:
+            return {
+                "min": r[0],
+                "max": r[1],
+                "avg": r[2],
+                "samples": r[3],
+                "volatility": ((r[1] - r[0]) / r[2]) * 100,
+            }
+        return None
 
 
 

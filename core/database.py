@@ -13,3 +13,39 @@ class Database:
     def _init_db(self):
         conn = self._connect()
         cur = conn.cursor()
+
+        cur.execute("""
+        CREATE TABLE IF NOT EXISTS prices (
+            id INTEGER PRIMARY KEY,
+            timestamp INTEGER,
+            price REAL,
+            currency TEXT,
+            source TEXT
+        )
+        """)
+
+        cur.execute("""
+        CREATE TABLE IF NOT EXISTS alerts (
+            id INTEGER PRIMARY KEY,
+            timestamp INTEGER,
+            level TEXT,
+            price REAL,
+            change REAL,
+            message TEXT
+        )
+        """)
+
+        cur.execute("""
+        CREATE TABLE IF NOT EXISTS portfolio (
+            id INTEGER PRIMARY KEY,
+            btc REAL,
+            purchase_price REAL,
+            currency TEXT,
+            note TEXT
+        )
+        """)
+
+        conn.commit()
+        conn.close()
+
+

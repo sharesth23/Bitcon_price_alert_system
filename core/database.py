@@ -48,4 +48,14 @@ class Database:
         conn.commit()
         conn.close()
 
+    def save_price(self, data):
+        conn = self._connect()
+        cur = conn.cursor()
+        cur.execute(
+            "INSERT INTO prices VALUES (NULL, ?, ?, ?, ?)",
+            (data["timestamp"], data["price"], data["currency"], ",".join(data["sources"]))
+        )
+        conn.commit()
+        conn.close()
+
 

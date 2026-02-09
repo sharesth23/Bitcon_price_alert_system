@@ -57,5 +57,27 @@ class Database:
         )
         conn.commit()
         conn.close()
+    
+    def get_price_change(self, minutes):
+        conn = self._connect()
+        cur = conn.cursor()
+
+        now = int(time.time())
+        past = now - minutes * 60
+
+        cur.execute("SELECT price FROM prices ORDER BY timestamp DESC LIMIT 1")
+        current = cur.fetchone()
+
+        cur.execute(
+            "SELECT price FROM prices WHERE timestamp <= ? ORDER BY timestamp DESC LIMIT 1",
+            (past,)
+        )
+        old = cur.fetchone()
+        conn.close()
+
+        if current and old:
+            return ((current[0] - old[0]) / old[0]) * 100
+        return None
+
 
 
